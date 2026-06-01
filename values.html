@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLD Consults | Our Values</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #0F172A; --secondary-color: #2563EB; --accent-color: #10B981; 
+            --text-dark: #334155; --bg-light: #F8FAFC; --card-bg: #FFFFFF;
+        }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        nav {
+            background-color: var(--primary-color); padding: 1.2rem 10%; display: flex;
+            justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { color: white; font-size: 1.5rem; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: #E2E8F0; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: white; padding: 6rem 10%; text-align: center;
+        }
+        .page-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .page-header p { color: #CBD5E1; font-size: 1.15rem; }
+
+        .container { width: 80%; margin: 0 auto; padding: 5rem 0; }
+        
+        .strategic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+        
+        .statement-card {
+            background: var(--card-bg); border-radius: 16px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #E2E8F0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .statement-card:hover {
+            transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .card-image-header {
+            width: 100%; height: 240px; overflow: hidden; position: relative;
+        }
+        .card-image-header img { width: 100%; height: 100%; object-fit: cover; }
+
+        .card-content { padding: 3rem; }
+        
+        .statement-card h3 { font-size: 1.7rem; color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .statement-card p { color: var(--text-dark); margin-bottom: 1.2rem; font-size: 1.05rem; }
+
+        footer { background-color: var(--primary-color); color: #94A3B8; padding: 4rem 10% 2.5rem 10%; text-align: center; }
+
+        @media (max-width: 968px) {
+            .strategic-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .container { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">ITLD <span>CONSULTS</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="values.html" class="active">Our Values</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Vision & Mission</h1>
+        <p>Fostering an environment built upon innovation, collective achievement, and trust.</p>
+    </div>
+
+    <main class="container">
+        <section class="strategic-grid">
+            <div class="statement-card" style="border-top: 5px solid var(--secondary-color);">
+                <div class="card-image-header">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dynamic Workspace Vision">
+                </div>
+                <div class="card-content">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--secondary-color);"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        Company Vision
+                    </h3>
+                    <p>Our vision is to cultivate a vibrant, dynamic workplace culture characterised by achievement through collaboration and trust.</p>
+                    <p>We strive to instil in every staff member a profound understanding of their essential role within the organisation while encouraging active and equitable participation from all employees, guided by our foundational principles and core values.</p>
+                    <p>By fostering a workplace where every voice is heard, we aim to create a harmonious environment that supports collective and individual success.</p>
+                </div>
+            </div>
+
+            <div class="statement-card" style="border-top: 5px solid var(--accent-color);">
+                <div class="card-image-header">
+                    <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=800&q=80" alt="Inclusive Corporate Team">
+                </div>
+                <div class="card-content">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-color);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        Mission Statement
+                    </h3>
+                    <p>We are unwavering in our commitment to empowering organisations by instilling a robust culture of innovation, diversity, and inclusion where every employee is valued and motivated to excel.</p>
+                    <p>Our mission encompasses the active development of talent, prioritising employee well-being, and establishing a dynamic workspace where everyone can achieve ambitions.</p>
+                    <p>In today’s competitive business landscape, our skilled consultants excel in attracting top talent, enhancing productivity, and cultivating an uplifting work environment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="color: white; font-weight: 700; margin-bottom: 0.75rem;">ITLD CONSULTS</p>
+        <p>&copy; 2026 ITLD Consulting. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

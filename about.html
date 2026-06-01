@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLD Consults | About Us</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #0F172A; --secondary-color: #2563EB; --accent-color: #10B981; 
+            --text-dark: #334155; --bg-light: #F8FAFC; --card-bg: #FFFFFF;
+        }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        nav {
+            background-color: var(--primary-color); padding: 1.2rem 10%; display: flex;
+            justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { color: white; font-size: 1.5rem; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: #E2E8F0; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: white; padding: 6rem 10%; text-align: center;
+        }
+        .page-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .page-header p { color: #CBD5E1; font-size: 1.15rem; }
+
+        .container { width: 80%; margin: 0 auto; padding: 5rem 0; }
+        
+        /* Modern alternating checkerboard layout for high narrative impact */
+        .story-block {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 6rem;
+        }
+        .story-block.reverse { grid-template-columns: 1fr 1fr; }
+        
+        .section-title-sm { color: var(--secondary-color); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block; font-weight: 700; }
+        .story-block h2 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1.5rem; line-height: 1.3; }
+        .story-block p { margin-bottom: 1.5rem; font-size: 1.05rem; color: #475569; }
+
+        .image-wrapper {
+            width: 100%; height: 420px; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08); border: 1px solid #E2E8F0;
+        }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+        .highlight-box {
+            background: #EFF6FF; padding: 2.5rem; border-radius: 12px; border-left: 6px solid var(--secondary-color); margin-top: 2rem;
+        }
+
+        footer { background-color: var(--primary-color); color: #94A3B8; padding: 4rem 10% 2.5rem 10%; text-align: center; }
+
+        @media (max-width: 968px) {
+            .story-block, .story-block.reverse { grid-template-columns: 1fr !important; gap: 3rem; }
+            .container { width: 90%; }
+            .image-wrapper { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">ITLD <span>CONSULTS</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="values.html">Our Values</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>About Our Firm</h1>
+        <p>Blending cutting-edge HR solutions with unmatched corporate expertise.</p>
+    </div>
+
+    <main class="container">
+        <div class="story-block">
+            <div>
+                <span class="section-title-sm">Welcome Note</span>
+                <h2>We aspire to be your strategic partner</h2>
+                <p>Welcome to ITLD Consulting, where we blend cutting-edge HR solutions with unmatched expertise tailored to your organisational needs. We are not just another HR consultancy; we aspire to be your strategic ally in harnessing the true potential of your workforce.</p>
+                <p>Recognising that employees are your most valuable asset, we offer insights and tools designed to strengthen your HR capabilities—whether you're a burgeoning startup, a dynamic mid-sized enterprise, or a well-established industry leader.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Executive Business Meeting">
+            </div>
+        </div>
+
+        <div class="story-block reverse" style="direction: rtl;">
+            <div style="direction: ltr;">
+                <span class="section-title-sm">Who We Are</span>
+                <h2>Driving Enterprise Operational Efficiency</h2>
+                <p>ITLD Consults is a leading Human Resources consulting firm dedicated to providing a wide range of services designed to meet the diverse needs of businesses of all sizes.</p>
+                <p>Our experienced team of highly qualified consultants offers invaluable support in areas such as recruitment and hiring, employee training and development, HR compliance, and strategic workforce planning.</p>
+                <div class="highlight-box">
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">Bespoke Implementation</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Our extensive range of services includes talent acquisition, employee development, HR compliance management, payroll services, and initiatives for fostering a positive organisational culture.</p>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://plus.unsplash.com/premium_photo-1661396923254-92ed923a1485?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Collaborative Workplace Discussion">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: white; font-weight: 700; margin-bottom: 0.75rem;">ITLD CONSULTS</p>
+        <p>&copy; 2026 ITLD Consulting. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

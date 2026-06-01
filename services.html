@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLD Consults | Services</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #0F172A; --secondary-color: #2563EB; --accent-color: #10B981; 
+            --text-dark: #334155; --bg-light: #F8FAFC; --card-bg: #FFFFFF;
+        }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        nav {
+            background-color: var(--primary-color); padding: 1.2rem 10%; display: flex;
+            justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { color: white; font-size: 1.5rem; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: #E2E8F0; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: white; padding: 6rem 10%; text-align: center;
+        }
+        .page-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .page-header p { color: #CBD5E1; font-size: 1.15rem; }
+
+        .container { width: 80%; margin: 0 auto; padding: 5rem 0; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; }
+        
+        /* Premium Image & Content Card Combined Styling */
+        .service-card {
+            background: var(--card-bg); border-radius: 14px; overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #E2E8F0;
+            transition: all 0.3s ease; display: flex; flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-8px); border-color: var(--secondary-color);
+            box-shadow: 0 20px 30px rgba(37, 99, 235, 0.08);
+        }
+
+        .service-img-header {
+            width: 100%; height: 200px; overflow: hidden; position: relative;
+        }
+        .service-img-header img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .service-card:hover .service-img-header img { transform: scale(1.05); }
+
+        .service-num-badge {
+            position: absolute; bottom: 15px; right: 15px; background: rgba(15, 23, 42, 0.85);
+            color: white; font-weight: 700; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; backdrop-filter: blur(4px);
+        }
+
+        .service-body { padding: 2.2rem; flex-grow: 1; }
+        .service-body h3 { font-size: 1.3rem; color: var(--primary-color); margin-bottom: 1rem; line-height: 1.4; }
+        .service-body p { font-size: 0.98rem; color: #475569; }
+
+        footer { background-color: var(--primary-color); color: #94A3B8; padding: 4rem 10% 2.5rem 10%; text-align: center; }
+
+        @media (max-width: 968px) {
+            .container { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">ITLD <span>CONSULTS</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="values.html">Our Values</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Our Strategic Services</h1>
+        <p>Comprehensive Human Resource tools and support systems optimized for enterprise performance.</p>
+    </div>
+
+    <main class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1698047681452-08eba22d0c64?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recruitment">
+                    <div class="service-num-badge">01</div>
+                </div>
+                <div class="service-body">
+                    <h3>Talent Acquisition & Recruitment</h3>
+                    <p>Our expert team utilises cutting-edge strategies and extensive networks to identify, attract, and secure top-tier talent. We focus on matching candidates with your organisation's goals and culture, ensuring a long-term cultural and performance fit.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80" alt="Employee Training">
+                    <div class="service-num-badge">02</div>
+                </div>
+                <div class="service-body">
+                    <h3>Employee Training & Development</h3>
+                    <p>We are committed to empowering your workforce through meticulously designed training programs and personalised development plans. Our initiatives aim to foster professional growth and significantly enhance overall productivity.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=500&q=80" alt="HR Outsourcing">
+                    <div class="service-num-badge">03</div>
+                </div>
+                <div class="service-body">
+                    <h3>HR Outsourcing & Administration</h3>
+                    <p>Let us handle the time-consuming administrative tasks of HR management, including payroll processing, benefits administration, and compliance issues. This allows you to focus purely on core operations and strategic growth.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=500&q=80" alt="Payroll Management">
+                    <div class="service-num-badge">04</div>
+                </div>
+                <div class="service-body">
+                    <h3>Payroll Management</h3>
+                    <p>Elevate your business operations with our comprehensive Payroll Management Service. Our attentive approach ensures accurate salary calculations, meticulous tax deductions, and unwavering adherence to regulatory compliance.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80" alt="Risk Management">
+                    <div class="service-num-badge">05</div>
+                </div>
+                <div class="service-body">
+                    <h3>HR Compliance & Risk Management</h3>
+                    <p>In a landscape filled with ever-evolving regulations, we provide expert guidance on HR compliance and risk management. Our team safeguards your organisation against potential legal pitfalls while optimising standard operational practices.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-header">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80" alt="Performance Solutions">
+                    <div class="service-num-badge">06</div>
+                </div>
+                <div class="service-body">
+                    <h3>Performance Management Solutions</h3>
+                    <p>We implement dynamic, results-oriented performance management systems designed to drive employee engagement, recognise individual achievements, and enhance overall output through strategic feedback channels.</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="grid-column: 1 / -1;">
+                <div class="service-img-header" style="height: 260px;">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Organisational Design">
+                    <div class="service-num-badge">07</div>
+                </div>
+                <div class="service-body" style="padding: 3rem;">
+                    <h3>Organisational Design & Restructuring</h3>
+                    <p>To truly achieve peak efficiency, expert guidance in strategic restructuring and change management is essential. We help you assess and optimise your organisation’s structural matrix to align it precisely with your long-term business goals and performance frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: white; font-weight: 700; margin-bottom: 0.75rem;">ITLD CONSULTS</p>
+        <p>&copy; 2026 ITLD Consulting. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
