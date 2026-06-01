@@ -32,7 +32,7 @@
 
         .container { width: 80%; margin: 0 auto; padding: 5rem 0; }
         
-        /* Modern alternating checkerboard layout for high narrative impact */
+        /* Alternating checkerboard layout */
         .story-block {
             display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 6rem;
         }
@@ -52,10 +52,100 @@
             background: #EFF6FF; padding: 2.5rem; border-radius: 12px; border-left: 6px solid var(--secondary-color); margin-top: 2rem;
         }
 
+        /* Separate Container for Contact Details */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid #E2E8F0;
+            margin-top: 2rem;
+        }
+
+        .contact-visual-panel {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-visual-panel h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .contact-visual-panel p {
+            color: #93C5FD;
+            font-size: 1.05rem;
+        }
+
+        .contact-details-panel {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            background: #EFF6FF;
+            color: var(--secondary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-info-text span {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #64748B;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-info-text p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .contact-info-text a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info-text a:hover {
+            color: var(--secondary-color);
+        }
+
         footer { background-color: var(--primary-color); color: #94A3B8; padding: 4rem 10% 2.5rem 10%; text-align: center; }
 
         @media (max-width: 968px) {
             .story-block, .story-block.reverse { grid-template-columns: 1fr !important; gap: 3rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .contact-visual-panel, .contact-details-panel { padding: 2.5rem; }
             .container { width: 90%; }
             .image-wrapper { height: 300px; }
         }
@@ -79,6 +169,7 @@
     </div>
 
     <main class="container">
+        <!-- Block 1: Welcome Note Story -->
         <div class="story-block">
             <div>
                 <span class="section-title-sm">Welcome Note</span>
@@ -91,6 +182,7 @@
             </div>
         </div>
 
+        <!-- Block 2: Corporate Summary Strategy -->
         <div class="story-block reverse" style="direction: rtl;">
             <div style="direction: ltr;">
                 <span class="section-title-sm">Who We Are</span>
@@ -104,6 +196,38 @@
             </div>
             <div class="image-wrapper">
                 <img src="https://plus.unsplash.com/premium_photo-1661396923254-92ed923a1485?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Collaborative Workplace Discussion">
+            </div>
+        </div>
+
+        <!-- Dedicated Contact Container -->
+        <div class="contact-container">
+            <div class="contact-visual-panel">
+                <h2>Connect With Our HR Experts</h2>
+                <p>Let's discuss how we can streamline your corporate structure, enhance compliance, and foster a dynamic workforce environment.</p>
+            </div>
+            <div class="contact-details-panel">
+                <!-- Phone Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-info-text">
+                        <span>Call or WhatsApp</span>
+                        <p>07031646863</p>
+                        <p style="margin-top: 0.1rem;">07061233866</p>
+                    </div>
+                </div>
+
+                <!-- Email Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-info-text">
+                        <span>Official Correspondence</span>
+                        <p><a href="mailto:info.itldconsulting@gmail.com">info.itldconsulting@gmail.com</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
